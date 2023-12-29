@@ -12,9 +12,9 @@ pipeline {
   stages {
 
     stage('Checkout Source') {
-                     git branch: 'main', credentialsId: 'efd41fd7-d0a9-4d70-8a82-d860de12d5c6', url: 'https://github.com/safaafabt/Pointage.git',
-
-      
+      steps {
+      git 'https://github.com/safaafabt/Pointage.git'
+      }
     }
 
     stage('Build image') {

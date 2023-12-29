@@ -7,6 +7,11 @@ pipeline {
 
   agent any
 
+      
+    tools {
+        git 'git'
+    }
+
   stages {
 
     stage('Checkout Source') {

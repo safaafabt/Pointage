@@ -2,7 +2,7 @@
 FROM node:19-alpine3.16
 
 #It will create a working directory for Docker. The Docker image will be created in this working directory.
-WORKDIR /node-app
+WORKDIR /nodeapp
 
 #Copy the React.js application dependencies from the package.json to the react-app working directory.
 COPY package.json .

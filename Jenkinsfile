@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "bravinwasike/node-app"
+    dockerimagename = "nodeapp"
     dockerImage = ""
   }
 

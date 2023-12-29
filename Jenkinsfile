@@ -9,7 +9,7 @@ pipeline {
 
       
     tools {
-        git 'git'
+        git 'Git'
     }
 
   stages {

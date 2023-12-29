@@ -11,7 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/safaafabt/pointage.git'
+        git 'https://github.com/safaafabt/Pointage.git'
       }
     }
 

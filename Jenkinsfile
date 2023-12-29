@@ -1,13 +1,13 @@
 pipeline {
 
-  tools {nodejs "node"}
-
   environment {
     dockerimagename = "nodeapp"
     dockerImage = ""
   }
 
   agent any
+
+  tools {nodejs "node"}
 
   stages {
 

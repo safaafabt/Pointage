@@ -11,10 +11,6 @@ pipeline {
         git 'git-linux'
     }
 
-      environment {
-        GIT_ASKPASS = "/git-askpass.sh"
-    }
-
   stages {
 
     stage('Checkout Source') {

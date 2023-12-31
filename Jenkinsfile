@@ -6,6 +6,9 @@ pipeline {
   }
 
   agent any
+    tools {
+        git 'git-linux'
+    }
 
   stages {
 

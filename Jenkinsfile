@@ -6,8 +6,13 @@ pipeline {
   }
 
   agent any
+
     tools {
         git 'git-linux'
+    }
+
+      environment {
+        GIT_ASKPASS = "/git-askpass.sh"
     }
 
   stages {

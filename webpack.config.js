@@ -12,6 +12,7 @@ module.exports = {
 };
 module.exports = {
   target: 'node',
+  entry: "./app.js",
   externals: {
     'mongodb-client-encryption': 'commonjs mongodb-client-encryption'
   }

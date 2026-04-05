@@ -10,3 +10,9 @@ module.exports = {
   },
   target: "node",
 };
+module.exports = {
+  target: 'node',
+  externals: {
+    'mongodb-client-encryption': 'commonjs mongodb-client-encryption'
+  }
+};

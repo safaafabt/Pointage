@@ -1,17 +1,17 @@
 name: Deploy workflow
 on: 
- pull_request:
-   types: opened
-   branches:
-     - main
-     - 'dev-*' # dev-test1, dev-test2
-     - 'feat/**' # feat/test1 , feat/test2/test3
- workflow_dispatch: 
+ #pull_request:
+  # types: opened
+   #branches:
+    # - main
+     #- 'dev-*' # dev-test1, dev-test2
+     # 'feat/**' # feat/test1 , feat/test2/test3
+# workflow_dispatch: 
  push:
    branches:
      - main
-   paths-ignore: 
-     - 'controllers/*'
+   #paths-ignore: 
+     #- 'controllers/*'
 jobs:
  test:
   runs-on: macos-14

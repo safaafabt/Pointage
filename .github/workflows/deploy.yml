@@ -26,7 +26,7 @@ jobs:
      run: npm install
    - name: run tests
      run: npm test
- deploy:
+ build:
   needs: test
   runs-on: macos-14
   steps:
@@ -44,6 +44,16 @@ jobs:
         # path: |
               # dist
               # package.json
+ deploy:
+   needs: build
+   runs-on: macos-14
+   steps:  
+    - name: download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: dist-files
+    - name: output content
+      run: ls
     - name: deployment
       run: echo " deployment ..."
     

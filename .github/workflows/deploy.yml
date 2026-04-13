@@ -18,6 +18,11 @@ jobs:
   steps:
    - name: get code 
      uses: actions/checkout@v3
+   - name: cache dependencies
+     uses: actions/cache@v3
+     with:
+       path: ~/.npm
+       key: deps-node-modules-${{ hashFiles('**/package-lock.json')}}
    - name: install node
      uses: actions/setup-node@v3
      with: 
@@ -34,6 +39,11 @@ jobs:
   steps:
     - name: get code
       uses: actions/checkout@v3
+    - name: cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: deps-node-modules-${{ hashFiles('**/package-lock.json')}} # when ever this file change it re cache
     - name: install dependency
       run: npm install
     - name: build code
